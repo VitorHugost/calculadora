@@ -40,19 +40,19 @@ operadores.forEach((element)=>{
 
             if(display.innerHTML == "0"){
                 display.innerHTML = ""
-                // display.innerHTML = evento.target.innerHTML 
+             display.innerHTML = evento.target.innerHTML 
             }else{
                 if(evento.target.innerHTML == "X"){
                     display.innerHTML += "*"
                 }else if(evento.target.innerHTML == "÷"){
                     display.innerHTML += "/"
-                } else{
+                }else if(evento.target.innerHTML == "+/-"){
+                    const res = eval(display.innerHTML +"*-1")
+                    display.innerHTML = res
+                }else{
                     display.innerHTML += evento.target.innerHTML
                 }   
             }
-
-             
-
         }
     })
 })
